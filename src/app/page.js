@@ -9,6 +9,7 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { TypewriterEffectSmoothDemo } from "@/components/ui/typewriter";
+import { HeroParallax } from "@/components/ui/hero-parallax";
 
 const data = [
   {
@@ -108,13 +109,31 @@ const items = [
   },
 ];
 
+const products = [
+  {
+    title: "Product 1",
+    link: "/product1",
+  },
+  {
+    title: "Product 2",
+    link: "/product2",
+  },
+  {
+    title: "Product 3",
+    link: "/product3",
+  },
+  // Add more products up to the 10th item
+];
+
+
 
 
 
 export default function Home() {
   return (
     <div className='p-10'>
-          <TypewriterEffectSmoothDemo />
+          <HeroParallax products={products} />  
+          {/* <TypewriterEffectSmoothDemo /> */}
           <AnimatedTestimonials testimonials={testimonials} />
           <Timeline data={data} />
           {/* <InfiniteMovingCards items={items} />  */}
